@@ -1,0 +1,36 @@
+> summary(modelH)
+ Family: zero_inflated_negbinomial 
+  Links: mu = log; shape = identity; zi = identity 
+Formula: PosH ~ Totalsample + abundance + RiquezadeParasitos + (1 | Bioma) + (1 | Localidade) + (1 | phylo) 
+   Data: dados4 (Number of observations: 233) 
+Samples: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup samples = 4000
+
+Group-Level Effects: 
+~Bioma (Number of levels: 7) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     0.45      0.36     0.02     1.34 1.00     1397     2113
+
+~Localidade (Number of levels: 43) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     0.48      0.29     0.03     1.12 1.00     1041     1602
+
+~phylo (Number of levels: 142) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     1.27      0.38     0.59     2.07 1.01      920     1384
+
+Population-Level Effects: 
+                   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept             -2.37      0.84    -4.07    -0.76 1.00     2236     2488
+Totalsample            0.01      0.00     0.01     0.02 1.00     3628     2897
+abundance              6.78      2.30     2.40    11.37 1.00     2666     2719
+RiquezadeParasitos     0.04      0.02     0.01     0.07 1.00     2873     2706
+
+Family Specific Parameters: 
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+shape     1.15      0.84     0.46     3.15 1.00     1289     1463
+zi        0.13      0.09     0.00     0.33 1.00     2057     1751
+
+Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).

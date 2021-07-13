@@ -1,0 +1,22 @@
+> summary(modelR)
+ Family: poisson 
+  Links: mu = log 
+Formula: n_regioes ~ Host_Status + n_bird_individuals + riqueza 
+   Data: dados (Number of observations: 675) 
+Samples: 4 chains, each with iter = 4000; warmup = 2000; thin = 1;
+         total post-warmup samples = 8000
+
+Population-Level Effects: 
+                   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept              0.09      0.04     0.00     0.17 1.00     8877     5608
+Host_StatusM          -0.04      0.15    -0.35     0.25 1.00     9801     5801
+Host_StatusPM          0.03      0.21    -0.40     0.42 1.00     9939     5710
+Host_StatusR_M         0.37      0.17     0.02     0.69 1.00     8276     5826
+Host_StatusR_PM        0.39      0.14     0.11     0.67 1.00     8722     5774
+Host_StatusR_PM_M      0.40      0.24    -0.08     0.86 1.00     7488     5854
+n_bird_individuals     0.01      0.01    -0.01     0.02 1.00     4964     5407
+riqueza                0.02      0.01    -0.01     0.05 1.00     5022     5034
+
+Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1)
